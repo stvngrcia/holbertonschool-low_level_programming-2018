@@ -21,8 +21,10 @@ int main(void)
 			putchar(number1);
 			number1++;
 			if (number < 57 || number1 <= 57)
+			{
 				putchar(',');
 				putchar(' ');
+			}
 		}
 		number++;
 	}
