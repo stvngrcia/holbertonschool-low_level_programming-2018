@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  *
- * Description: Prints the alphabet using ascii values except e and q
+ * Description: Prints the alphabet using ascii backwards
  *
  * Return: Always 0
  */
