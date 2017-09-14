@@ -22,7 +22,10 @@ int main(void)
 				putchar(number);
 				putchar(number1);
 				if (number < 56)
+				{
 					putchar(',');
+					putchar(' ');
+				}
 			}
 			number1++;
 		}
