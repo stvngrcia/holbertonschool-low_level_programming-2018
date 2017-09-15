@@ -2,49 +2,34 @@
 /**
  * main - Entry point
  *
- * Description: printing all possible combination of two digit numbers
+ * Description: prints all possible combinations of two two-digit numbers
  *
- * Return: Always Zero
+ * Return : Always zero
  */
 int main(void)
 {
-	int n;
-	int n_1;
-	int n_2;
-	int n_3;
+	int m_0;
+	int m_1;
 
-	n = 48;
-	while (n <= 57)
+	for (m_0 = 0; m_0 < 99; m_0++)
 	{
-		n_1 = 48;
-		while (n_1 <= 57)
+		for (m_1 = m_0 + 1; m_1 <= 99; m_1++)
 		{
-			n_2 = 48;
-			while (n_2 <= 57)
+			if (m_0 < m_1)
 			{
-				n_3 = 48;
-				while (n_3 <= 57)
+				putchar (m_0 / 10 + 48);
+				putchar (m_0 % 10 + 48);
+				putchar (' ');
+				putchar (m_1 / 10 + 48);
+				putchar (m_1 % 10 + 48);
+				if (m_0 != 98)
 				{
-					if (n_1 < n_3 && n_2 >= n)
-					{
-						putchar(n);
-						putchar(n_1);
-						putchar(' ');
-						putchar(n_2);
-						putchar(n_3);
-						if (n < 57 || n_1 < 56)
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
-					n_3++;
+					putchar (',');
+					putchar (' ');
 				}
-				n_2++;
+
 			}
-			n_1++;
 		}
-		n++;
 	}
 	putchar('\n');
 	return (0);
