@@ -3,6 +3,7 @@
  * main - Entry point
  *
  * Description: prints all possible combinations of two two-digit numbers
+ * non repeating
  *
  * Return : Always zero
  */
