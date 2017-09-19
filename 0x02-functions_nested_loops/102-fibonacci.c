@@ -16,7 +16,7 @@ int main(void)
 	b = 2;
 	printf("%lu, ", a);
 	printf("%lu", b);
-	for (n = 0; n <= 45; n++)
+	for (n = 0; n <= 50; n++)
 	{
 		if (n <= 45)
 			printf(", ");
