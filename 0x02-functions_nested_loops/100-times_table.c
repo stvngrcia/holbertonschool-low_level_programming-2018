@@ -2,27 +2,27 @@
 
 /**
  * print_times_table- prints the times table
- * @z: limit for multiplication
+ * @n: limit for multiplication
  */
 
-void print_times_table(int z)
+void print_times_table(int n)
 {
-	int n;
+	int z;
 	int m;
 	int mult;
 
-	for (n = 0; n <= z; n++)
+	for (z = 0; z <= n; z++)
 	{
-		for (m = 0; m <= z; m++)
+		for (m = 0; m <= n; m++)
 		{
-			if (z < 15 && z > 0)
+			if (n < 15 && n > 0)
 			{
-				mult = (m * n);
+				mult = (m * z);
 				operation(mult);
-				spaces(n, m, z);
+				spaces(z, m, n);
 			}
 		}
-		if (z < 15 && z > 0)
+		if (n < 15 && n > 0)
 			_putchar('\n');
 	}
 }
