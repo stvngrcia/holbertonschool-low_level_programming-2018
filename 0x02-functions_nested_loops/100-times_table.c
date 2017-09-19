@@ -17,7 +17,7 @@ void print_times_table(int n)
 		{
 			for (m = 0; m <= n; m++)
 			{
-				if (n < 15 && n > 0)
+				if (n < 15 && n >= 0)
 				{
 					mult = (m * z);
 					operation(mult);
