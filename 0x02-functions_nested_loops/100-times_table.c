@@ -11,20 +11,20 @@ void print_times_table(int n)
 	int m;
 	int mult;
 
-	if (n < 15)
+	if (n <= 15)
 	{
 		for (z = 0; z <= n; z++)
 		{
 			for (m = 0; m <= n; m++)
 			{
-				if (n < 15 && n >= 0)
+				if (n <= 15 && n >= 0)
 				{
 					mult = (m * z);
 					operation(mult);
 					spaces(z, m, n);
 				}
 			}
-			if (n < 15 && n > 0)
+			if (n <= 15 && n >= 0)
 				_putchar('\n');
 		}
 	}
