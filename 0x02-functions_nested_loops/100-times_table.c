@@ -11,19 +11,22 @@ void print_times_table(int n)
 	int m;
 	int mult;
 
-	for (z = 0; z <= n; z++)
+	if (n < 15)
 	{
-		for (m = 0; m <= n; m++)
+		for (z = 0; z <= n; z++)
 		{
-			if (n < 15 && n > 0)
+			for (m = 0; m <= n; m++)
 			{
-				mult = (m * z);
-				operation(mult);
-				spaces(z, m, n);
+				if (n < 15 && n > 0)
+				{
+					mult = (m * z);
+					operation(mult);
+					spaces(z, m, n);
+				}
 			}
+			if (n < 15 && n > 0)
+				_putchar('\n');
 		}
-		if (n < 15 && n > 0)
-			_putchar('\n');
 	}
 }
 
