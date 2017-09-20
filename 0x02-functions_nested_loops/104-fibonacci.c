@@ -66,7 +66,7 @@ void calculation(long a, long b, int n)
 	head_b = b / 1000000000000000000;
 	body_b = b % 1000000000000000000;
 
-	for (; n <= 93; n++)
+	for (; n <= 94; n++)
 	{
 		body_sum = body_a + body_b;
 		head_sum = head_a + head_b;
