@@ -6,6 +6,6 @@ In this folder you will find exercises I have done to learn more about functions
 + isdigit - Checks if a character is a digit
 + mul - multiplies two integers.
 + print_numbers - prints numbers 0 to 9 using ascii values
-
++ print_most_numbers - prints numbers 0 to 9 using ascii values except 2 & 4
 
 ## Resources
