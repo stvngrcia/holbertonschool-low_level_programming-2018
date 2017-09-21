@@ -12,6 +12,6 @@ In this folder you will find exercises I have done to learn more about functions
 + print_diagonal - Prints a diagonal line oflenght n
 + print_square - Prints square of size size
 + Fizz_buzz - prints fizz buzz up to 100 for number that are divisable by 3 and 5
-
++ print_triangle - prints a triangle of size n
 
 ## Resources
