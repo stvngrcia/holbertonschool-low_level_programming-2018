@@ -10,5 +10,7 @@ In this folder you will find exercises I have done to learn more about functions
 + more_numbers - Prints 10 times the numbers, from 0 to 14
 + print_line - Prints a line of lenght n
 + print_diagonal - Prints a diagonal line oflenght n
++ print_square - Prints square of size size
+
 
 ## Resources
