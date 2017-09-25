@@ -19,4 +19,5 @@ Learning about pointers!! :)
 + puts2 - prints only even
 + puts_half - Prints only half of the string
 + print_array - prints an array
++ _strcpy - create a copy of a string
 
