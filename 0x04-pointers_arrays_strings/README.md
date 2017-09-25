@@ -14,4 +14,5 @@ Learning about pointers!! :)
 + swap_int - swaps the value of two integers
 + _strlen - Calculates the lenght of a string
 + _puts - prints a string
++ print_rev - printing a string in reverse
 
