@@ -16,4 +16,5 @@ Learning about pointers!! :)
 + _puts - prints a string
 + print_rev - printing a string in reverse
 + rev_string - reverses a string in place
++ puts2 - prints only even
 
