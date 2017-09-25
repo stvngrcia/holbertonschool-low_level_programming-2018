@@ -12,3 +12,4 @@ Learning about pointers!! :)
 
 + reset_to_98 - changes the value of a pointed varible
 + swap_int - swaps the value of two integers
++ _strlen - Calculates the lenght of a string
