@@ -15,4 +15,5 @@ Learning about pointers!! :)
 + _strlen - Calculates the lenght of a string
 + _puts - prints a string
 + print_rev - printing a string in reverse
++ rev_string - reverses a string in place
 
