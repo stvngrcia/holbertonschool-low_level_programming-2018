@@ -18,4 +18,5 @@ Learning about pointers!! :)
 + rev_string - reverses a string in place
 + puts2 - prints only even
 + puts_half - Prints only half of the string
++ print_array - prints an array
 
