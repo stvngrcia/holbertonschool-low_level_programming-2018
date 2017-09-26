@@ -14,7 +14,7 @@ int _atoi(char *s)
 	int i;
 	int len;
 	int number;
-	int body;
+	unsigned int body;
 	int expt;
 	int total_len;
 	int negatives;
