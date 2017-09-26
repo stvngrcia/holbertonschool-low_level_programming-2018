@@ -12,10 +12,10 @@ void rev_string(char *s)
 	int head;
 	char tmp;
 
-	for (len = 0; s[len]; len++)
+	for (len = 1; s[len]; len++)
 	{}
 
-	for (head = 0; head <= len; head++, len--)
+	for (head = 0; head < len; head++, len--)
 	{
 		tmp = s[len - 1];
 		s[len - 1] = s[head];
