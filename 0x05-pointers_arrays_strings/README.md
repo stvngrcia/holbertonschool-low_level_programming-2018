@@ -1,0 +1,2 @@
+## Synopsis
+More pointer exercises
