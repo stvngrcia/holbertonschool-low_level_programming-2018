@@ -2,6 +2,7 @@
  * _strncat - Concatenates two stings
  * @dest: Destination string
  * @src: the source of the string
+ * @n: number of bytes to look
  * Return: Returns a pointer to the resulting string dest
  */
 

@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * _strcat - Concatenates two stings
  * @dest: Destination string
