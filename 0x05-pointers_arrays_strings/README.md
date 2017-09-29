@@ -1,5 +1,5 @@
 ## Synopsis
-Creating the following files
+Creating the following functions
 
 + _strcat - Concatenates two stings
 + _strncat - Concatenates two stings
