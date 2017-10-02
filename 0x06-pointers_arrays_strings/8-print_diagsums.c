@@ -1,15 +1,27 @@
 #include <stdio.h>
 
+/**
+ * print_diagsums - "Adds numbers in a diagonal"
+ * @a: array containing characters
+ * @size: Size of array levels
+ */
 void print_diagsums(int *a, int size)
 {
 	int i;
-	int sum;
+	int sumR;
+	int sumL;
 
-	sum = 0;
+	sumR = 0;
+	sumL = 0;
 	for (i = 0; i < (size * size);)
 	{
+		sumR = sumR + a[i];
 		i = i + size + 1;
-		sum = sum + a[i];
 	}
-	printf("%d\n", sum);
+	for (i = 0; i < (size * size) - size;)
+	{
+		i = i + size - 1;
+		sumL = sumL + a[i];
+	}
+	printf("%d, %d\n", sumR, sumL);
 }
