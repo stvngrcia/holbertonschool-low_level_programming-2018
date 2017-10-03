@@ -10,9 +10,7 @@ int _strcmp(char *s1, char *s2);
 char *_strstr(char *haystack, char *needle)
 {
 	if (haystack == NULL || needle == NULL)
-	{
 		return (NULL);
-	}
 	if (*needle == '\0')
 		return (haystack);
 	while (*haystack != '\0')
@@ -20,11 +18,12 @@ char *_strstr(char *haystack, char *needle)
 		if (*haystack == needle[0])
 		{
 			if (_strcmp(haystack, needle))
+			{
 				return (haystack);
+			}
 		}
 		haystack++;
 	}
-
 	return (NULL);
 }
 
@@ -39,8 +38,12 @@ char *_strstr(char *haystack, char *needle)
 int _strcmp(char *s1, char *s2)
 {
 	int i;
+	int len;
 
-	for (i = 0; s1[i] != '\0'; i++)
+	for (len = 0; s2[len] != '\0'; len++)
+	{}
+
+	for (i = 0; i < len; i++)
 	{
 		if (s1[i] != s2[i])
 			return (0);
