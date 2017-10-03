@@ -9,6 +9,10 @@ int _strcmp(char *s1, char *s2);
  */
 char *_strstr(char *haystack, char *needle)
 {
+	if (haystack == NULL || needle == NULL)
+	{
+		return (NULL);
+	}
 	while (*haystack != '\0')
 	{
 		if (*haystack == needle[0])
@@ -16,9 +20,9 @@ char *_strstr(char *haystack, char *needle)
 			if (_strcmp(haystack, needle))
 				return (haystack);
 		}
-
 		haystack++;
 	}
+
 	return (NULL);
 }
 
