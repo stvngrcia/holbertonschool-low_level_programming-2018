@@ -12,7 +12,7 @@ int is_palindrome(char *s)
 	int counter;
 
 	if (*s == '\0')
-		return(0);
+		return (1);
 	len = 0;
 	counter = 0;
 
