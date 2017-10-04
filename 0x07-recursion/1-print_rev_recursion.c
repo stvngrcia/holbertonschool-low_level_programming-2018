@@ -7,6 +7,8 @@ char *rev(char *s);
 */
 void _print_rev_recursion(char *s)
 {
+	if (*s == '\0')
+		return;
 	if (s[0] == '\n')
 		s = rev(s);
 	else if (*(s - 1) == '\n')
