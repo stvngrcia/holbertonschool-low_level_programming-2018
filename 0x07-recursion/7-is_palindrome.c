@@ -28,6 +28,7 @@ int is_palindrome(char *s)
  * @s: String
  * @len: length of string
  * @counter: initial counter
+ * @half: Contains the half of the length
  * Return: 1 if palindrome 0 if not palindrome
  */
 int check(char *s, int len, int counter, int half)
