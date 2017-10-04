@@ -11,6 +11,8 @@ int is_palindrome(char *s)
 	int len;
 	int counter;
 
+	if (*s == '\0')
+		return(0);
 	len = 0;
 	counter = 0;
 
