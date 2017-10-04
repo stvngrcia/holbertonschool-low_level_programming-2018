@@ -36,7 +36,7 @@ int check(char *s, int len, int counter, int half)
 	if (s[counter] != s[len - 1])
 		return (0);
 	/*It is a palindrome*/
-	if (counter == half / 2)
+	if (counter == half)
 		return (1);
 	counter++;
 	len--;

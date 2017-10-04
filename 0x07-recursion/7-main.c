@@ -16,7 +16,7 @@ int main(void)
     printf("%d\n", r);
     r = is_palindrome("holberton");
     printf("%d\n", r);
-    r = is_palindrome("s");
+    r = is_palindrome("");
     printf("%d\n", r);
     return (0);
 }
