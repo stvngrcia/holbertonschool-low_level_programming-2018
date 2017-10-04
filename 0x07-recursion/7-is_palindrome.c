@@ -1,5 +1,5 @@
 int length(char *str, int len);
-int check(char *s, int len, int counter);
+int check(char *s, int len, int counter, int half);
 
 /**
  * is_palindrome - Checks if string is a palindrome
@@ -10,6 +10,7 @@ int is_palindrome(char *s)
 {
 	int len;
 	int counter;
+	int half;
 
 	if (*s == '\0')
 		return (1);
@@ -17,7 +18,8 @@ int is_palindrome(char *s)
 	counter = 0;
 
 	len = length(s, len);
-	len = check(s, len, counter);
+	half = len / 2;
+	len = check(s, len, counter, half);
 	return (len);
 }
 
@@ -28,17 +30,17 @@ int is_palindrome(char *s)
  * @counter: initial counter
  * Return: 1 if palindrome 0 if not palindrome
  */
-int check(char *s, int len, int counter)
+int check(char *s, int len, int counter, int half)
 {
 	/*Not a palindrome*/
 	if (s[counter] != s[len - 1])
 		return (0);
 	/*It is a palindrome*/
-	if (counter + 1 == len / 2)
+	if (counter == half / 2)
 		return (1);
 	counter++;
 	len--;
-	return (check(s, len, counter));
+	return (check(s, len, counter, half));
 }
 /**
  * length - Calculates the length of the strin
