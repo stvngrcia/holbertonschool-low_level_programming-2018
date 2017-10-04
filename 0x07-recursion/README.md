@@ -7,4 +7,4 @@ In this folder you can find the following functions
 + factorial - Calculating the factorial of a n number
 + _pow_recursion - Calculates the power of a function
 + _sqrt_recursion - Calculates the square root of a number
-
++ is_prime_number - Calculates if a number is prime
