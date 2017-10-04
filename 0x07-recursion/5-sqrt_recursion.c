@@ -11,7 +11,7 @@ int _sqrt_recursion(int n)
 
 	mult = 1;
 	mult = calculation(n, mult);
-	return(mult);
+	return (mult);
 }
 
 /**
@@ -23,10 +23,10 @@ int _sqrt_recursion(int n)
 int calculation(int n, int mult)
 {
 	if (n < 0)
-		return(-1);
+		return (-1);
 	if (mult * mult == n)
-		return(mult);
+		return (mult);
 	if (mult > n)
-		return(-1);
-	return(calculation(n, mult + 1));
+		return (-1);
+	return (calculation(n, mult + 1));
 }
