@@ -21,3 +21,8 @@ Creating a static library with the following functions
 + _abs - computes the absolute value of an integer.
 + _strcpy - create a copy of a string
 + _atoi - Converts numbers in a string to integers
+
+
+## Usage
+
+To create the library run ./create_static_lib.sh
