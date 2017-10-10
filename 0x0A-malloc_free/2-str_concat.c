@@ -27,6 +27,7 @@ char *str_concat(char *s1, char *s2)
 		heap_array[i] = s1[i];
 	for (i = 0; s2[i] != '\0'; i++, s1_len++)
 		heap_array[s1_len] = s2[i];
+	heap_array[s1_len] = '\0';
 	return (heap_array);
 }
 

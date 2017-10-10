@@ -10,8 +10,7 @@
 int main(void)
 {
     char *s;
-
-    s = str_concat(NULL, NULL);
+    s = str_concat("Betty ", "Holberton");
     if (s == NULL)
     {
         printf("failed\n");
