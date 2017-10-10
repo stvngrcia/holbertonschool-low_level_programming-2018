@@ -19,7 +19,11 @@ char *str_concat(char *s1, char *s2)
 	s1_len = len(s1);
 	s2_len = len(s2);
 	if (s1 == NULL || s2 == NULL)
-		return (NULL);
+	{
+		heap_array = malloc(sizeof(char));
+		heap_array[0] = '\0';
+		return (heap_array);
+	}
 	heap_array = malloc(s1_len + s2_len + 1);
 	if (heap_array == NULL)
 		return (NULL);
