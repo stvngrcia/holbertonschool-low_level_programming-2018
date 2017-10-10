@@ -14,12 +14,13 @@ char *_strdup(char *str)
 
 	for (len = 0; str[len] != '\0'; len++)
 	{}
-	heap_array = malloc(len);
+	heap_array = malloc(len + 1);
 	if (heap_array == NULL)
 		return (NULL);
-	for (i = 0; i < len; i++)
+	for (i = 0; i < len ; i++)
 	{
 		heap_array[i] = str[i];
 	}
+	heap_array[i] = '\0';
 	return (heap_array);
 }
