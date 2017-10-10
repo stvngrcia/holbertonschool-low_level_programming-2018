@@ -11,6 +11,8 @@ char *create_array(unsigned int size, char c)
 	unsigned int i;
 	char *heap_array;
 
+	if (size == 0)
+		return (NULL);
 	heap_array = malloc(size);
 	if (heap_array == NULL)
 		return (NULL);
