@@ -15,15 +15,18 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 		return (NULL);
 	/*Allocating memory for rows*/
-	heap_array = malloc(height);
+	heap_array = malloc(sizeof(int*) * height);
 	if (heap_array == NULL)
 		return (NULL);
 	/*Allocating memory for each collum*/
 	for (i = 0; i < height; i++)
 	{
-		heap_array[i] = malloc(width);
+		heap_array[i] = malloc(sizeof(int) * width);
 		if (heap_array[i] == NULL)
+		{
 			return (NULL);
+		}
+
 	}
 	/*Initializing the array*/
 	for (i = 0; i < height; i++)
