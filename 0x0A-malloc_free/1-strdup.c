@@ -12,6 +12,8 @@ char *_strdup(char *str)
 	int i;
 	char *heap_array;
 
+	if (str == NULL)
+		return (NULL);
 	for (len = 0; str[len] != '\0'; len++)
 	{}
 	heap_array = malloc(len + 1);
