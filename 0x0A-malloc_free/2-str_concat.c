@@ -16,21 +16,31 @@ char *str_concat(char *s1, char *s2)
 	int s2_len;
 	char *heap_array;
 
+	if (s1 == NULL)
+		s1 = '\0';
+
+	if (s2 == NULL)
+		s2 = '\0';
 	s1_len = len(s1);
 	s2_len = len(s2);
-	if (s1 == NULL || s2 == NULL)
-	{
-		heap_array = malloc(sizeof(char));
-		*heap_array = '\0';
-		return (heap_array);
-	}
+
 	heap_array = malloc(s1_len + s2_len + 1);
 	if (heap_array == NULL)
 		return (NULL);
-	for (i = 0; s1[i] != '\0'; i++)
-		heap_array[i] = s1[i];
-	for (i = 0; s2[i] != '\0'; i++, s1_len++)
-		heap_array[s1_len] = s2[i];
+	for (i = 0; i < s1_len; i++)
+	{
+		if (s1_len <= 0)
+			heap_array[i] = '\0';
+		else
+			heap_array[i] = s1[i];
+	}
+	for (i = 0; i < s2_len; i++, s1_len++)
+	{
+		if (s2_len <= 0)
+			heap_array[s1_len] = '\0';
+		else
+			heap_array[s1_len] = s2[i];
+	}
 	heap_array[s1_len] = '\0';
 	return (heap_array);
 }
