@@ -1,4 +1,6 @@
 #include <stdlib.h>
+void freeing(int **heap_array, int height);
+
 /**
  * alloc_grid - Allocates a grid based on height and width
  * @width: An integer
@@ -15,7 +17,7 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 		return (NULL);
 	/*Allocating memory for rows*/
-	heap_array = malloc(sizeof(int*) * height);
+	heap_array = malloc(sizeof(int *) * height);
 	if (heap_array == NULL)
 		return (NULL);
 	/*Allocating memory for each collum*/
@@ -24,6 +26,7 @@ int **alloc_grid(int width, int height)
 		heap_array[i] = malloc(sizeof(int) * width);
 		if (heap_array[i] == NULL)
 		{
+			freeing(heap_array, i);
 			return (NULL);
 		}
 
@@ -37,4 +40,19 @@ int **alloc_grid(int width, int height)
 		}
 	}
 	return (heap_array);
+}
+
+/**
+ * freeing - frees an array
+ * @heap_array: An array
+ * @height: An integer
+ */
+void freeing(int **heap_array, int height)
+{
+	int i;
+
+	for (i = 0; i < height; i++)
+	{
+		free(heap_array[i]);
+	}
 }
