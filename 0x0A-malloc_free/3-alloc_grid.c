@@ -55,4 +55,5 @@ void freeing(int **heap_array, int height)
 	{
 		free(heap_array[i]);
 	}
+	free(heap_array);
 }
