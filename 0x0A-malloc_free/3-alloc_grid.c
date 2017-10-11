@@ -26,8 +26,12 @@ int **alloc_grid(int width, int height)
 		heap_array[i] = malloc(sizeof(int) * width);
 		if (heap_array[i] == NULL)
 		{
-			freeing(heap_array, i);
-			return (NULL);
+			for (j = 0; j < i; j++)
+			{
+				free(heap_array[j]);
+			}
+			free(heap_array);
+
 		}
 
 	}
