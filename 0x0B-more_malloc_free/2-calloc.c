@@ -18,7 +18,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (heap_array == NULL)
 		return (NULL);
 
-	for (i = 0;  i < nmeb * size; i++)
+	for (i = 0;  i < nmemb * size; i++)
 		heap_array[i] = 0;
 
 	return (heap_array);
