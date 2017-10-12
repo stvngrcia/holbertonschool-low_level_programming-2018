@@ -21,5 +21,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	for (i = 0;  i < nmeb * size; i++)
 		heap_array[i] = 0;
 
-	return ((void*)heap_array);
+	return (heap_array);
 }
