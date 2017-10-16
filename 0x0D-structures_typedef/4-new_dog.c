@@ -64,11 +64,12 @@ char *_strcpy(char *src)
 	char *dest;
 
 	len = _strlen(src);
-	dest = malloc(sizeof(char) * len);
+	dest = malloc(sizeof(char) * len + 1);
 	if (dest == NULL)
 		return (NULL);
 
-	for (i = 0; src[i]; i++)
+	for (i = 0; src[i] != '\0'; i++)
 		dest[i] = src[i];
+	dest[i] = '\0';
 	return (dest);
 }
