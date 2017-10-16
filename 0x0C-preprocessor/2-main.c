@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Definition: Prints the name of the file that it was compiled from
+ * Definition: Prints the name of the file that it was compiled from.
  * Return: Always 0
  */
 int main(void)
