@@ -1,6 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
-
+#include <string.h>
 /**
  * new_dog - Creates a new instance of a struct
  * @name: A string representing the name of a dog
@@ -15,12 +15,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	d = malloc(sizeof(dog_t));
 	if (d == NULL)
 		return (NULL);
-	if (owner == NULL)
-		return (NULL);
-	if (name == NULL)
-		return (NULL);
-	d->name = name;
+	d->name = strdup(name);
 	d->age = age;
-	d->owner = owner;
+	d->owner = strdup(owner);
 	return (d);
 }
