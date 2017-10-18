@@ -38,6 +38,6 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 
-	printf("%d\n", fun(a,b));
+	printf("%d\n", fun(a, b));
 	return (0);
 }
