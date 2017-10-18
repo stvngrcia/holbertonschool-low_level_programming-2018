@@ -14,23 +14,20 @@ int main(int argc, char **argv)
 	int b;
 	char *s;
 
+	if (argc != 4)
+	{
+		printf("ERROR\n");
+		exit(98);
+	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	s = argv[2];
-	if (argc != 4)
-	{
-		printf("ERROR");
-		exit(98);
-	}
 
 	if (*s != '+' && *s != '/' && *s != '-' && *s != '%' && *s != '*')
 	{
 		printf("ERROR\n");
 		exit(99);
-
 	}
-
 	printf("%d\n", get_op_func(s)(a, b));
-
 	return (0);
 }
