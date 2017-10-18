@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	s = argv[2];
-	if (argc < 4)
+	if (argc != 4)
 	{
 		printf("ERROR");
 		exit(98);
