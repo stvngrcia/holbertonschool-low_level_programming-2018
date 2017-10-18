@@ -28,6 +28,11 @@ int main(int argc, char **argv)
 		printf("ERROR\n");
 		exit(99);
 	}
+	if ((*s == '/' && b == 0) || (*s == '%' && b == 0))
+	{
+		printf("ERROR\n");
+		exit(100);
+	}
 	printf("%d\n", get_op_func(s)(a, b));
 	return (0);
 }
