@@ -6,7 +6,7 @@
  * @s: String character representing the operation
  * Return: A pointer to a function
  */
-int (*get_op_func(char *s))(int, int)
+int (*get_op_func(char *s))(int a, int b)
 {
 	int i;
 	op_t ops[] = {
@@ -19,10 +19,11 @@ int (*get_op_func(char *s))(int, int)
 	};
 
 	i = 0;
-	while (ops[i][0] != NULL)
+	while (i < 10)
 	{
-		if (ops[i][0] == s)
-			return (ops[0][1]);
+		if (ops[i].op[0] == s[0])
+			return (ops[i].f);
+		i++;
 	}
 	return (NULL);
 }
