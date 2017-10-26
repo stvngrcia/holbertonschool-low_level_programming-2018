@@ -6,8 +6,5 @@ void myStartupFun(void)__attribute__ ((constructor));
  */
 void myStartupFun(void)
 {
-	char *a;
-
-	a = "You're beat! and yet,you must allow,\n";
-	printf("%sI bore my house upon my back!\n", a);
+	printf("You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
 }
