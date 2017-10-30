@@ -6,3 +6,4 @@ The functions included in this directory are:
 + add_nodeint - Adds node at the beginning of the list
 + free_listint - Frees a list of nodes
 + free_listint2 - Frees a list of nodes, and sets the head to NULL
++ pop_listint - Deletes the first element of a list
