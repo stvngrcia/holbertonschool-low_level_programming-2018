@@ -7,3 +7,4 @@ The functions included in this directory are:
 + free_listint - Frees a list of nodes
 + free_listint2 - Frees a list of nodes, and sets the head to NULL
 + pop_listint - Deletes the first element of a list
++ sum_listint - Calculates the sum of the integers in a list
