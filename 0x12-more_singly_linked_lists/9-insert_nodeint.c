@@ -5,7 +5,7 @@ listint_t *create_new_node(int n);
  * @head: Pointer to the first element of the list
  * @idx: Index to insert a node at
  * @n: number to be inserted into the node
- * Return: Pointer to the first value of a linked list
+ * Return: The address of the newly created node
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
@@ -34,7 +34,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		tmp->next = new_node;
 		new_node->next = tmp_old;
 	}
-	return (*head);
+	return (new_node);
 }
 
 /**
