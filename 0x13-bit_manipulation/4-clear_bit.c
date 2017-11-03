@@ -7,7 +7,7 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int mask;
+	unsigned long int mask;
 
 	mask = 1;
 	mask = mask << index;
