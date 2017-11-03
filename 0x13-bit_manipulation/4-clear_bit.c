@@ -15,7 +15,6 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		return (-1);
 	if (((*n >> index) & 1) == 1) /*Checks if 1 at position*/
 		*n = mask ^ *n;
-	else
-		*n = mask & *n;
+
 	return (1);
 }
