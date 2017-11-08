@@ -28,6 +28,7 @@ int main(int argc, char **argv)
 	f_to = argv[2];
 
 	open_files(f_from, f_to);
+	exit(0);
 	return (0);
 }
 
@@ -104,6 +105,8 @@ int read_files(int from_fd, int to_fd, char *f_from, char *f_to)
 				"Error: Can't read from file %s\n", f_from);
 			exit(98);
 		}
+		if (read_chars == 0)
+			return (0);
 		write_to_file(buff, to_fd, read_chars, f_to);
 	}
 	return (0);
