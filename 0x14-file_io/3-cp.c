@@ -49,7 +49,7 @@ int open_files(char *f_from, char *f_to)
 			"Error: Can't read from file %s\n", f_from);
 		exit(98);
 	}
-	to_fd = open(f_to, O_CREAT | O_EXCL | O_WRONLY, 0666);
+	to_fd = open(f_to, O_CREAT | O_EXCL | O_WRONLY, 0664);
 	if (to_fd == -1)
 	{
 		/*if (errno == EEXIST) was removed*/
