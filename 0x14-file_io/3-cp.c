@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 	f_to = argv[2];
 
 	open_files(f_from, f_to);
-	return (1);
+	return (0);
 }
 
 /**
