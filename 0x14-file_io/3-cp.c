@@ -72,7 +72,7 @@ int open_files(char *f_from, char *f_to)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to_fd);
 		exit(100);
 	}
-	return (1);
+	return (0);
 }
 /**
  * read_files - Reads the file FROM_FILE.
@@ -106,7 +106,7 @@ int read_files(int from_fd, int to_fd, char *f_from, char *f_to)
 		}
 		write_to_file(buff, to_fd, read_chars, f_to);
 	}
-	return (1);
+	return (0);
 }
 
 /**
@@ -131,5 +131,5 @@ int write_to_file(char *buff, int to_fd, int read_chars, char *f_to)
 			exit(99);
 		}
 	}
-	return (1);
+	return (0);
 }
