@@ -1,5 +1,4 @@
 #include "lists.h"
-dlistint_t *create_node(const int n);
 
 /**
  * add_dnodeint - Adds a node to the begining of a linked list.
