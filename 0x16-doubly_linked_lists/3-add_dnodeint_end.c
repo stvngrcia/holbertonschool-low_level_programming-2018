@@ -32,7 +32,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 
 
 /**
- * create_node - Creates a node.
+ * create_node3 - Creates a node.
  * @n: Integer value to add to a linked list node.
  * Return: Upon sucess pointer to a dlistint_t node. Otherwise NULL
  */
