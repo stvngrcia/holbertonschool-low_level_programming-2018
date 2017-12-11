@@ -28,3 +28,7 @@ Creating a Dynamic library with the following functions
 + cp -r c_files/* .
 + ./1-create_dynamic_lib.sh
 + rm *.c *.o
++ To be able to use this library on your code, simply, include "holberton.h"
+on your file set the LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH and then compile your
+code normally.
+
