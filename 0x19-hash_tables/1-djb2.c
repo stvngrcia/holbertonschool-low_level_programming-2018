@@ -1,7 +1,7 @@
 /**
  * hash_djb2 - Hashing algorithm refrenced from cse.yorku.ca/~oz/hash.html
  * @str: string that is going to be hashed
- * Returns: An unsigned int representing the hash.
+ * Return: An unsigned int representing the hash.
  */
 unsigned long int hash_djb2(const unsigned char *str)
 {
