@@ -10,27 +10,26 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	int str_size;
+	int key_exist;
 	hash_node_t *hash_node;
 	unsigned long int index;
 	const unsigned char *u_key;
-	char *str_key;
-	char *str_value;
 
 	u_key = (const unsigned char *)key;
 	str_size = check_key_size(key);
 	if (str_size == 0)
 		return (0);
-	str_key = malloc(sizeof(char) * str_size + 1);
-	str_size = check_value_size(value);
-	str_value = malloc(sizeof(char) * str_size + 1);
-	if (str_key == NULL || str_value == NULL)
-		return (0);
+	index = key_index(u_key, ht->size);
+	key_exist = k(ht, key, index, value);
+	if (key_exist == 0)
+		return (1);
+
 	hash_node = malloc(sizeof(hash_node_t));
 	if (hash_node == NULL)
 		return (0);
-	index = key_index(u_key, ht->size);
-	hash_node->key = strcpy(str_key, key);
-	hash_node->value = strcpy(str_value, value);
+
+	hash_node->key = strdup(key);
+	hash_node->value = strdup(value);
 	hash_node->next = ht->array[index];
 	ht->array[index] = hash_node;
 	return (1);
@@ -52,15 +51,29 @@ int check_key_size(const char *key)
 }
 
 /**
- * check_value_size - Checks the value size.
- * @value: pointer to an array of characters.
- * Return: 0 if empty string. Otherwise 1.
+ * k - Checks if a key is already in the hash table.
+ * @h: Pointer to the hash table.
+ * @k: pointer to an array of characters.
+ * @idx: index where they key would exists.
+ * @val: Value of the key.
+ * Return: 0 if the key exist. 1 otherwise.
  */
-int check_value_size(const char *value)
+int k(hash_table_t *h, const char *k, unsigned long int idx, const char *val)
 {
-	int i;
+	hash_node_t *tmp;
 
-	for (i = 0; value[i] != '\0'; i++)
-		;
-	return (i);
+	tmp = h->array[idx];
+	while (tmp != NULL)
+	{
+
+		if (strcmp(k, tmp->key) == 0)
+		{
+			free(tmp->value);
+			tmp->value = strdup(val);
+			return (0);
+		}
+
+		tmp = tmp->next;
+	}
+	return (1);
 }
