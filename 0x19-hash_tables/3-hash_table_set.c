@@ -52,8 +52,8 @@ int check_key_size(const char *key)
 }
 
 /**
- * check_key_size - Checks the key size.
- * @key: pointer to an array of characters.
+ * check_value_size - Checks the value size.
+ * @value: pointer to an array of characters.
  * Return: 0 if empty string. Otherwise 1.
  */
 int check_value_size(const char *value)
