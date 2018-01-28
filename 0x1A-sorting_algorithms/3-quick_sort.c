@@ -72,7 +72,11 @@ size_t swap(int *array, size_t ptr1, size_t ptr2, size_t pivot, size_t og)
 			array[ptr2] = tmp;
 			ptr1++;
 			if (ptr1 == ptr2)
+			{
+				print_array(array, og);
 				break;
+			}
+
 			ptr2--;
 			print_array(array, og);
 			continue;
