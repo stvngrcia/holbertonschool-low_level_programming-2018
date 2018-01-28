@@ -14,7 +14,7 @@ void quick_sort(int *array, size_t size)
 	size_t low;
 
 	low = 0;
-	if (size < 2)
+	if (size < 1)
 		return;
 	sort(array, low, size - 1, size);
 }
@@ -75,14 +75,12 @@ size_t swap(int *array, size_t ptr1, size_t ptr2, size_t pivot, size_t og)
 				break;
 			ptr2--;
 			print_array(array, og);
+			continue;
 		}
-		else
-		{
-			if (array[ptr1] <= array[pivot])
-				ptr1++;
-			else if (array[ptr2] >= array[pivot])
-				ptr2--;
-		}
+		if (array[ptr1] <= array[pivot])
+			ptr1++;
+		else if (array[ptr2] >= array[pivot])
+			ptr2--;
 	}
 	return (ptr1);
 }
