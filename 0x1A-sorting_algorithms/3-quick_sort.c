@@ -38,6 +38,16 @@ void sort(int *array, size_t low, size_t size, size_t og)
 	ptr2 = pivot - 1;
 	if (pivot == 0 || size == 0 || ptr2 <= ptr1)
 		return;
+	if (og <= 3)
+	{
+		if (array[ptr1] > array[ptr2])
+		{
+			tmp = array[ptr1];
+			array[ptr1] = array[ptr2];
+			array[ptr2] = tmp;
+			print_array(array, og);
+		}
+	}
 	ptr1 = swap(array, ptr1, ptr2, pivot, og);
 	if (array[pivot] < array[ptr1])
 	{
@@ -76,7 +86,6 @@ size_t swap(int *array, size_t ptr1, size_t ptr2, size_t pivot, size_t og)
 				print_array(array, og);
 				break;
 			}
-
 			ptr2--;
 			print_array(array, og);
 			continue;
