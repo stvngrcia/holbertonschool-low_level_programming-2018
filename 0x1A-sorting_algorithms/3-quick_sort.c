@@ -1,7 +1,8 @@
 #include "sort.h"
 #include <stdlib.h>
-void sort(int *array, size_t low, size_t size, size_t);
-size_t swap(int *array, size_t ptr1, size_t ptr2, size_t pivot, size_t og);
+void sort(int *array, size_t beg, size_t size, size_t);
+int check(int *array, size_t beg, size_t end);
+int swap(int *, size_t, size_t, size_t);
 
 /**
  * quick_sort - Sorts an array of integers in asceding order using the
@@ -11,89 +12,97 @@ size_t swap(int *array, size_t ptr1, size_t ptr2, size_t pivot, size_t og);
  */
 void quick_sort(int *array, size_t size)
 {
-	size_t low;
+	size_t beg;
 
-	low = 0;
+	beg = 0;
 	if (size < 2 || array == NULL)
 		return;
-	sort(array, low, size - 1, size);
+	size = size - 1;
+	sort(array, beg, size, size + 1);
 }
 
 /**
  * sort - Does the actual sorting.
  * @array: Array of integers that need to be sorted.
- * @low: The lower bound of the array partition.
- * @size: The upper bound of the array partion.
+ * @beg: The lower bound of the array partition.
+ * @end: The upper bound of the array partion.
  * @og: The original size of the whole array. Used only for printing.
  */
-void sort(int *array, size_t low, size_t size, size_t og)
+void sort(int *array, size_t beg, size_t end, size_t og)
 {
-	int tmp;
-	size_t pivot;
-	size_t ptr1;
-	size_t ptr2;
+	size_t i;
+	size_t j;
+	int piv;
+	int flag;
+	int c;
 
-	pivot = size;
-	ptr1 = low;
-	ptr2 = pivot - 1;
-	if (pivot == 0 || size == 0 || ptr2 <= ptr1)
-		return;
-	if (og <= 3)
+	piv = array[end];
+	j = beg;
+	i = j - 1;
+	flag = 0;
+
+	for (j = beg; j < end; j++)
 	{
-		if (array[ptr1] > array[ptr2])
+		if (array[j] <= piv)
 		{
-			tmp = array[ptr1];
-			array[ptr1] = array[ptr2];
-			array[ptr2] = tmp;
-			print_array(array, og);
+			i++;
+			flag = swap(array, j, i, og);
 		}
 	}
-	ptr1 = swap(array, ptr1, ptr2, pivot, og);
-	if (array[pivot] < array[ptr1])
+	i++;
+	flag = swap(array, j, i, og);
+
+	if (flag == 0)
 	{
-		tmp = array[pivot];
-		array[pivot] = array[ptr1];
-		array[ptr1] = tmp;
-		print_array(array, og);
+		c = check(array, beg, end);
+		if (c == 1)
+			sort(array, beg, end - 1, og);
 	}
-	sort(array, low, ptr1, og);
-	sort(array, ptr1, size, og);
+	else
+	{
+		sort(array, beg, i, og);
+		sort(array, i, end, og);
+	}
 }
 
 /**
  * swap - Swaps the numbers in the array.
  * @array: Array of integers that need to be sorted.
- * @ptr1: The lower bound of the array partition.
- * @ptr2: The upper bound of the array partion.
- * @pivot: The position used to compared the numbers against.
+ * @i: The lower bound of the array partition.
+ * @j: The upper bound of the array partion.
  * @og: The original size of the whole array. Used only for printing.
- * Return: The value of ptr1 which tells where the pivot should go.
+ * Return: 1 when a swap happens. 0 otherwise.
  */
-size_t swap(int *array, size_t ptr1, size_t ptr2, size_t pivot, size_t og)
+int swap(int *array, size_t i, size_t j, size_t og)
 {
 	int tmp;
 
-	while (ptr1 != ptr2)
+	if (j != i)
 	{
-		if (array[ptr1] > array[pivot] && array[ptr2] < array[pivot])
-		{
-			tmp = array[ptr1];
-			array[ptr1] = array[ptr2];
-			array[ptr2] = tmp;
-			ptr1++;
-			if (ptr1 == ptr2)
-			{
-				print_array(array, og);
-				break;
-			}
-			ptr2--;
-			print_array(array, og);
-			continue;
-		}
-		if (array[ptr1] <= array[pivot])
-			ptr1++;
-		else if (array[ptr2] >= array[pivot])
-			ptr2--;
+		tmp = array[i];
+		array[i] = array[j];
+		array[j] = tmp;
+		print_array(array, og);
+		return (1);
 	}
-	return (ptr1);
+	return (0);
+}
+
+/**
+ * check - checks if the array portion is already sorted.
+ * @array: Array of integers that need to be sorted.
+ * @beg: The lower bound of the array partition.
+ * @end: The upper bound of the array partion.
+ * Return: 1 if the array is not sorted. 0 otherwise.
+ */
+int check(int *array, size_t beg, size_t end)
+{
+	size_t i;
+
+	for (i = beg; i < end; i++)
+	{
+		if (array[i] > array[i + 1])
+			return (1);
+	}
+	return (0);
 }
