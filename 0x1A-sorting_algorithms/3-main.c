@@ -17,7 +17,7 @@ int main(void)
     /*1, 1, 1, 1, 1, 1, 1, 2, 1, 1 , 1, 2*/
     /*48, 19, 50*/
     /*1, 13, 5, 30, 50*/
-    int array[] = {17, 41, 5, 22, 28, 6, 29, 3, 13};
+    int array[] = {4, 19, 50};
     size_t n = sizeof(array) / sizeof(array[0]);
 
     print_array(array, n);
