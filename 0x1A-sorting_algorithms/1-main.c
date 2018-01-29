@@ -49,7 +49,7 @@ int main(void)
     /*48, 19, 50*/
     /*1, 13, 5, 30, 50*/
     listint_t *list;
-    int array[] = {1, 13, 5, 30, 50};
+    int array[] = {19, 48, 99, 71, 13, 52, 96, 73, 86, 7};
     size_t n = sizeof(array) / sizeof(array[0]);
 
     list = create_listint(array, n);
