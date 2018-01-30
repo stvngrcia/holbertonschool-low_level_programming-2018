@@ -4,12 +4,12 @@ void sort(int *array, size_t low, size_t size, size_t);
 size_t swap(int *array, size_t ptr1, size_t ptr2, size_t pivot, size_t og);
 
 /**
- * quick_sort - Sorts an array of integers in asceding order using the
+ * quick_sort_hoare - Sorts an array of integers in asceding order using the
  * quick sort algorithm implementing the Lomuto partition scheme.
  * @array: Array of integers that need to be sorted.
  * @size: The size of the array to sort.
  */
-void quick_sort(int *array, size_t size)
+void quick_sort_hoare(int *array, size_t size)
 {
 	size_t low;
 
