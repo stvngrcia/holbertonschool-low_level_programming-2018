@@ -26,7 +26,8 @@ void cocktail_sort_list(listint_t **list)
 				tmp = tmp->next;
 		}
 		tmp = tmp->prev;
-
+		if (flag == 1)
+			break;
 		while (tmp->prev != NULL)
 		{
 			if (tmp->n < tmp->prev->n)
