@@ -12,9 +12,9 @@ void cocktail_sort_list(listint_t **list)
 	listint_t *tmp;
 
 	flag = 0;
-	tmp = *list;
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
+	tmp = *list;
 	while (flag == 0)
 	{
 		flag = 1;
