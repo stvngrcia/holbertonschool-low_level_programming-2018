@@ -52,7 +52,7 @@ int swap(listint_t **list, listint_t *current, int flag)
 	listint_t *tmp;
 
 	if (list == NULL || *list == NULL || current == NULL)
-		return(1);
+		return (1);
 
 	if (flag == 1)
 		current = current->prev;
