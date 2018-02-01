@@ -35,6 +35,8 @@ void cocktail_sort_list(listint_t **list)
 			else
 				tmp = tmp->prev;
 		}
+		if (flag == 1)
+			break;
 	}
 }
 
