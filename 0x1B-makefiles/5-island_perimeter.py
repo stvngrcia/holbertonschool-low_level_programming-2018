@@ -13,13 +13,25 @@ def island_perimeter(grid):
     for y, level in enumerate(grid):
         for x, parcel in enumerate(level):
             if parcel == land:  # Checking only when hitting land
-                if grid[y][x - 1] == water:  # Looking west
+                try:
+                    if grid[y][x - 1] == water:  # Looking west
+                        perimeter += 1
+                except IndexError:
                     perimeter += 1
-                if grid[y][x + 1] == water:  # Looking east
+                try:
+                    if grid[y][x + 1] == water:  # Looking east
+                        perimeter += 1
+                except IndexError:
                     perimeter += 1
-                if grid[y - 1][x] == water:  # Looking north
+                try:
+                    if grid[y - 1][x] == water:  # Looking north
+                        perimeter += 1
+                except IndexError:
                     perimeter += 1
-                if grid[y + 1][x] == water:  # Looking south
+                try:
+                    if grid[y + 1][x] == water:  # Looking south
+                        perimeter += 1
+                except IndexError:
                     perimeter += 1
 
     return perimeter
