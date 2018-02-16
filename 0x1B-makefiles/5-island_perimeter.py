@@ -23,7 +23,12 @@ def island_perimeter(grid):
                         perimeter += 1
                 except IndexError:
                     perimeter += 1
-                if y - 1 < 0 or grid[1 - y][x] == water:  # Looking north
+                try:
+                    if grid[1 - y][x] == water:  # Looking north
+                        perimeter += 1
+                except:
+                    perimeter += 1
+                if y - 1 < 0:
                     perimeter += 1
                 try:
                     if grid[y + 1][x] == water:  # Looking south
