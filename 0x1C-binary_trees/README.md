@@ -12,3 +12,4 @@ Creating Binary Trees.
 |binary_tree_is_root|Checks if the node is the root node.|
 |binary_tree_preorder|Prints the values of a binary tree in pre-order.|
 |binary_tree_inorder|Prints the values of a binary tree in-order.|
+|binary_tree_postorder|Prints the values of a binary tree post-order.|
