@@ -9,3 +9,4 @@ Creating Binary Trees.
 |binary_tree_insert_right|inserts a node as the right-child of another node|
 |binary_tree_delete| Deletes a Binary tree using post order traversal|
 |binary_tree_is_leaf|Checks if a nde is a leaf or not.|
+|binary_tree_is_root|Checks if the node is the root node.|
