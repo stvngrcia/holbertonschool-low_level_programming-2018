@@ -14,3 +14,4 @@ Creating Binary Trees.
 |binary_tree_inorder|Prints the values of a binary tree in-order.|
 |binary_tree_postorder|Prints the values of a binary tree post-order.|
 |binary_tree_height|returns the height of the tree.|
+|binary_tree_size|Calculates the size of a binary tree.|
