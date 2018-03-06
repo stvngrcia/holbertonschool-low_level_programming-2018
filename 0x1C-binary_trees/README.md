@@ -17,3 +17,4 @@ Creating Binary Trees.
 |binary_tree_size|Calculates the size of a binary tree.|
 |binary_tree_leaves|Counts the leaves in a binary tree.|
 |binary_tree_nodes|Counts the nodes in a binary tree.|
+|binary_tree_balance|Measures the balance factor of a binary tree."|
