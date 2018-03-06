@@ -18,3 +18,4 @@ Creating Binary Trees.
 |binary_tree_leaves|Counts the leaves in a binary tree.|
 |binary_tree_nodes|Counts the nodes in a binary tree.|
 |binary_tree_balance|Measures the balance factor of a binary tree."|
+|binary_tree_is_full|Check if a binary tree is full.|
