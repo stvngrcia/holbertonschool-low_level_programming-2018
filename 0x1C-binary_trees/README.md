@@ -15,3 +15,4 @@ Creating Binary Trees.
 |binary_tree_postorder|Prints the values of a binary tree post-order.|
 |binary_tree_height|returns the height of the tree.|
 |binary_tree_size|Calculates the size of a binary tree.|
+|binary_tree_leaves|Counts the leaves in a binary tree.|
