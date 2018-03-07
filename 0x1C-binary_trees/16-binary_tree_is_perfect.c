@@ -39,20 +39,20 @@ int is_perfect(const binary_tree_t *h, const binary_tree_t *tree, int size)
 	left = left + is_perfect(h, tree->left, left);
 	right = right + is_perfect(h, tree->right, right);
 	if (tree->left == NULL && tree->right != NULL)
-		return (-1);
+		return (-100);
 	if (tree->left != NULL && tree->right == NULL)
-		return (-1);
+		return (-100);
 	if (tree == h)
 	{
 		if (right != left)
 			return (0);
-		if (right == -1 || left == -1)
+		if (right < 0 || left < 0)
 			return (0);
 		else
 			return (1);
 	}
-	if (right == -1 || left == -1)
-		return (-1);
+	if (right < 0 || left < 0)
+		return (-100);
 	if (right > left)
 		return (right + 1);
 	return (left + 1);
