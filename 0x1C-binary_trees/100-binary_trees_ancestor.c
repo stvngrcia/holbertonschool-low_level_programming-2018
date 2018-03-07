@@ -12,6 +12,8 @@ const binary_tree_t *second)
 	binary_tree_t *tmp1;
 	binary_tree_t *tmp2;
 
+	if (first == NULL || second == NULL)
+		return;
 	if (first == second)
 		return ((binary_tree_t *)first);
 	if (first->parent == second->parent)
