@@ -28,15 +28,5 @@ const binary_tree_t *second)
 		}
 	}
 
-	tmp1 = (binary_tree_t *)second;
-	for (; tmp1 != NULL; tmp1 = tmp1->parent)
-	{
-		tmp2 = (binary_tree_t *)first;
-		for (; tmp2 != NULL; tmp2 = tmp2->parent)
-		{
-			if (tmp1 == tmp2)
-				return (tmp1);
-		}
-	}
 	return (NULL);
 }
