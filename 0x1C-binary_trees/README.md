@@ -22,3 +22,4 @@ Creating Binary Trees.
 |binary_tree_is_perfect|Checks if a tree if perfect.|
 |binary_tree_sibling|Returns the sibling of a node.|
 |binary_tree_uncle|Returns the uncle of a node.|
+|binary_trees_ancestor|Finds the lowest common ancestor of two nodes.|
