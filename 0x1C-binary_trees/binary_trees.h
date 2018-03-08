@@ -2,6 +2,8 @@
 #define BINARY_T
 
 #include <stdlib.h>
+
+
 /**
  * struct binary_tree_s - Binary tree node
  *
@@ -22,6 +24,18 @@ typedef struct binary_tree_s binary_tree_t;
 typedef struct binary_tree_s bst_t;
 typedef struct binary_tree_s avl_t;
 typedef struct binary_tree_s heap_t;
+
+/**
+ * struct queue_s - Structure for queue
+ * @child: Integer stored in the node
+ * @next: Pointer to the next node
+ */
+struct queue_s
+{
+	binary_tree_t *child;
+	struct queue_s *next;
+};
+typedef struct queue_s queue_t;
 
 void binary_tree_print(const binary_tree_t *);
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
@@ -45,5 +59,6 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 const binary_tree_t *second);
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 
 #endif

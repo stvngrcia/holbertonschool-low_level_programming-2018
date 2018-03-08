@@ -24,3 +24,4 @@ Creating Binary Trees.
 |binary_tree_uncle|Returns the uncle of a node.|
 |binary_trees_ancestor|Finds the lowest common ancestor of two nodes.|
 |binary_tree_depth|Measures the depth of a node in a binary tree|
+|binary_tree_levelorder|Prints a tree in a level by level order.|
