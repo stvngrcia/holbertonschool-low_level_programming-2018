@@ -25,3 +25,4 @@ Creating Binary Trees.
 |binary_trees_ancestor|Finds the lowest common ancestor of two nodes.|
 |binary_tree_depth|Measures the depth of a node in a binary tree|
 |binary_tree_levelorder|Prints a tree in a level by level order.|
+|binary_tree_is_complete|Checks if the binary tree is complete looking at each level and checking that after a non full node is found the next nodes are a leaf|
