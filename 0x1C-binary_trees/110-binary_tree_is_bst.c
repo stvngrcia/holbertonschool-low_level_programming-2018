@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 #include <stdio.h>
-int is_bst(const binary_tree_t *tree, int *numbers);
+int is_bst(const binary_tree_t *tree, binary_tree_t **numbers);
 size_t calculate_size(const binary_tree_t *tree, size_t size);
 
 
@@ -12,16 +12,20 @@ size_t calculate_size(const binary_tree_t *tree, size_t size);
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
 	size_t size;
-	int *numbers;
+	size_t idx;
+	binary_tree_t **numbers;
 	int value;
 
 	if (tree == NULL)
 		return (0);
 	size = 0;
 	size = calculate_size(tree, size);
-	numbers = calloc(5, sizeof(int) * size);
+	numbers = malloc(size * sizeof(binary_tree_t *));
 	if (numbers == NULL)
 		return (0);
+	for (idx = 0; idx <= size; idx++)
+		numbers[idx] = NULL;
+
 	value = is_bst(tree, numbers);
 	return (value);
 }
@@ -32,7 +36,7 @@ int binary_tree_is_bst(const binary_tree_t *tree)
  * @numbers: Pointer to an array that contains the numbers in order.
  * Return: 1 if BST. Otherwise 0.
  */
-int is_bst(const binary_tree_t *tree, int *numbers)
+int is_bst(const binary_tree_t *tree, binary_tree_t **numbers)
 {
 	int idx;
 	int value;
@@ -44,11 +48,11 @@ int is_bst(const binary_tree_t *tree, int *numbers)
 	value = is_bst(tree->left, numbers);
 	if (value == 0)
 		return (0);
-	while (numbers[idx] != 0)
+	while (numbers[idx] != NULL)
 		idx++;
 
-	numbers[idx] = tree->n;
-	if (idx > 0 && numbers[idx] <= numbers[idx - 1])
+	numbers[idx] = (binary_tree_t *)tree;
+	if (idx > 0 && (numbers[idx])->n <= (numbers[idx - 1])->n)
 		return (0);
 	value = is_bst(tree->right, numbers);
 	return (value);
