@@ -23,10 +23,11 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 	numbers = malloc(size * sizeof(binary_tree_t *));
 	if (numbers == NULL)
 		return (0);
-	for (idx = 0; idx <= size; idx++)
+	for (idx = 0; idx < size; idx++)
 		numbers[idx] = NULL;
 
 	value = is_bst(tree, numbers);
+	free(numbers);
 	return (value);
 }
 
