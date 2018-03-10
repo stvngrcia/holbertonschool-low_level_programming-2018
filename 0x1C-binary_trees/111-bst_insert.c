@@ -1,5 +1,5 @@
 #include "binary_trees.h"
-bst_t *find_node(bst_t *tree, int value);
+bst_t *find_parent_node(bst_t *tree, int value);
 
 /**
  * bst_insert - Inserts a node in a binary tree.
@@ -42,8 +42,8 @@ bst_t *bst_insert(bst_t **tree, int value)
 bst_t *find_parent_node(bst_t *tree, int value)
 {
 	if (tree->left != NULL &&  value <= tree->n)
-		tree = find_node(tree->left, value);
+		tree = find_parent_node(tree->left, value);
 	else if (tree->right != NULL && value > tree->n)
-		tree = find_node(tree->right, value);
+		tree = find_parent_node(tree->right, value);
 	return (tree);
 }
