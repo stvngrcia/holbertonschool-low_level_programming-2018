@@ -28,7 +28,11 @@ bst_t *bst_insert(bst_t **tree, int value)
 		else if (value > hold->n)
 			hold->right = node;
 		else
+		{
+			free(node);
 			node = NULL;
+		}
+
 	}
 	return (node);
 }
