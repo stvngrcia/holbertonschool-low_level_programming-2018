@@ -28,3 +28,4 @@ Creating Binary Trees.
 |binary_tree_is_complete|Checks if the binary tree is complete looking at each level and checking that after a non full node is found the next nodes are a leaf|
 |binary_tree_rotate_left|Rotates a tree to the left.|
 | binary_tree_rotate_right|Rotates a tree to the right.|
+|array_to_bst|Builds a Binary Search Tree from an array|
