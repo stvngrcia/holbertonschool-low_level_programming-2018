@@ -10,15 +10,10 @@ bst_t *array_to_bst(int *array, size_t size)
 {
 	size_t idx;
 	bst_t *node;
-	bst_t *tmp;
 
 	node = NULL;
 
 	for (idx = 0; idx < size; idx++)
-	{
-		tmp = bst_insert(&node, array[idx]);
-		if (tmp == NULL)
-			return (NULL);
-	}
+		bst_insert(&node, array[idx]);
 	return (node);
 }

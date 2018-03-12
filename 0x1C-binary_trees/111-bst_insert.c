@@ -23,16 +23,15 @@ bst_t *bst_insert(bst_t **tree, int value)
 	{
 		hold = find_parent_node(*tree, value);
 		node->parent = hold;
-		if (value < hold->n)
-			hold->left = node;
-		else if (value > hold->n)
-			hold->right = node;
-		else
+		if (value == hold->n)
 		{
 			free(node);
 			node = NULL;
 		}
-
+		else if (value < hold->n)
+			hold->left = node;
+		else if (value > hold->n)
+			hold->right = node;
 	}
 	return (node);
 }
@@ -45,7 +44,9 @@ bst_t *bst_insert(bst_t **tree, int value)
  */
 bst_t *find_parent_node(bst_t *tree, int value)
 {
-	if (tree->left != NULL &&  value <= tree->n)
+	if (value == tree->n)
+		return (tree);
+	if (tree->left != NULL && value <= tree->n)
 		tree = find_parent_node(tree->left, value);
 	else if (tree->right != NULL && value > tree->n)
 		tree = find_parent_node(tree->right, value);
