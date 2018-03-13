@@ -30,3 +30,4 @@ Creating Binary Trees.
 | binary_tree_rotate_right|Rotates a tree to the right.|
 |array_to_bst|Builds a Binary Search Tree from an array|
 |bst_search|searches for a value in a Binary Search Tree.|
+|bst_remove|Removes a node from a binary tree|
