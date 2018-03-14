@@ -29,7 +29,11 @@ int binary_tree_is_avl(const binary_tree_t *tree)
 	value = 0;
 	factor = balance_factor(tree, value);
 	if (factor == -1)
+	{
 		return (0);
+		free(numbers);
+	}
+
 	value = is_bst(tree, numbers);
 	free(numbers);
 	return (value);
@@ -51,8 +55,8 @@ int balance_factor(const binary_tree_t *tree, int value)
 	left = value;
 	if (tree == NULL)
 		return (0);
-	left = left + balance_factor(tree->left, value);
-	right = right + balance_factor(tree->right, value);
+	left = left + balance_factor(tree->left, left);
+	right = right + balance_factor(tree->right, right);
 
 	if (left == -1 || right == -1)
 		return (-1);
