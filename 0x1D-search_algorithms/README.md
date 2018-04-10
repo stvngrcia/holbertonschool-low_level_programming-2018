@@ -13,3 +13,4 @@ and have the same numerical prefix as the algorithm file. For example 0-main.c c
 |------------------|--------------|--------------|
 |0-linear.c        | Linear Search|          O(n)|
 |1-binary.c        |  Binary Seach|     O(log(n))|
+|100-jump.c        |   Jump Serach|    O(sqrt(n))|
