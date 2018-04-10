@@ -9,6 +9,7 @@ and have the same numerical prefix as the algorithm file. For example 0-main.c c
 
 + All the prototypes are located in the ```search_algos.h```
 
-|File Name         |Algorithm     |
-|------------------|--------------|
-|0-linear.c        | Linear Search|
+|File Name         |Algorithm     |Time complexity|
+|------------------|--------------|--------------|
+|0-linear.c        | Linear Search|          O(n)|
+|1-binary.c        |  Binary Seach|     O(log(n))|
