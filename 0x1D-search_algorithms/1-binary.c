@@ -58,7 +58,7 @@ int finder(int *array, size_t size, size_t low, size_t high, int value)
 	}
 	else if (array[mid] > value)
 	{
-		high = mid;
+		high = mid - 1;
 		size = mid;
 	}
 	if (size == 0 && array[mid + 1] != value)
