@@ -21,10 +21,13 @@ int binary_search(int *array, size_t size, int value)
 	high = size;
 	if (array == NULL)
 		return (-1);
-	if (size == 0 && array[size] == value)
-		return (size);
-	if (size == 0 && array[size] != value)
+	if (size == 0)
+	{
+		print_array(array, low, high);
+		if (array[size] == value)
+			return (size);
 		return (-1);
+	}
 	return (finder(array, size, low, high, value));
 }
 
