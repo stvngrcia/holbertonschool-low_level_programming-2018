@@ -1,9 +1,10 @@
 #include "search_algos.h"
 int finder(int *array, size_t size, size_t low, size_t high, int value);
 void print_array(int *array, size_t low, size_t high);
+int find_lowest(int *array, int mid, int value, int low);
 
 /**
- * binary_search - Searches for a value in an array by splitting the array in
+ * advanced_binary - Searches for a value in an array by splitting the arrayin
  * half every time.
  * @array: List of integer numbers sorted in an ascending order
  * @size: The total amount of numbers in the array.
@@ -11,7 +12,7 @@ void print_array(int *array, size_t low, size_t high);
  * Return: The index in which the value is located. Or if it does not exits
  * or array is NULL -1
  */
-int binary_search(int *array, size_t size, int value)
+int advanced_binary(int *array, size_t size, int value)
 {
 	size_t low;
 	size_t high;
@@ -50,7 +51,7 @@ int finder(int *array, size_t size, size_t low, size_t high, int value)
 	print_array(array, low, high);
 
 	if (array[mid] == value)
-		return (mid);
+		return (find_lowest(array, (int)mid, value, low));
 	if (array[mid] < value)
 	{
 		low = mid + 1;
@@ -68,6 +69,20 @@ int finder(int *array, size_t size, size_t low, size_t high, int value)
 	}
 	return (finder(array, size, low, high, value));
 }
+
+/**
+ *
+ *
+ *
+ */
+int find_lowest(int *array, int mid, int value, int low)
+{
+	if (mid >= 0 && array[mid -1] == value)
+		return(finder(array, mid, low, mid, value));
+
+	return(mid);
+}
+
 
 /**
  * print_array - Prints an array of integers separated by a comma and space.
