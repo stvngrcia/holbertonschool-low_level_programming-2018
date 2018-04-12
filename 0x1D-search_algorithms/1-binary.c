@@ -44,7 +44,7 @@ int binary_search(int *array, size_t size, int value)
  */
 int finder(int *array, size_t size, size_t low, size_t high, int value)
 {
-	size_t mid;
+	int mid;
 
 	mid = size / 2 + low;
 
@@ -60,7 +60,7 @@ int finder(int *array, size_t size, size_t low, size_t high, int value)
 	else if (array[mid] > value)
 	{
 		high = mid - 1;
-		size = mid;
+		size = mid - low;
 	}
 	if (size == 0 && array[mid + 1] != value)
 	{
