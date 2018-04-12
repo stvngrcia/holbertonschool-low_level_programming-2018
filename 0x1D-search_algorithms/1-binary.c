@@ -19,10 +19,9 @@ int binary_search(int *array, size_t size, int value)
 	if (array == NULL || size == 0)
 		return (-1);
 
-	size = size - 1;
 	low = 0;
 	high = size;
-	if (size == 0)
+	if (size == 1)
 	{
 		print_array(array, low, high);
 		if (array[size] == value)
