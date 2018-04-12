@@ -46,7 +46,7 @@ int finder(int *array, size_t size, size_t low, size_t high, int value)
 {
 	int mid;
 
-	mid = (size - 1) / 2 + low;
+	mid = size / 2 + low;
 
 	print_array(array, low, high);
 
