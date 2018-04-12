@@ -71,16 +71,19 @@ int finder(int *array, size_t size, size_t low, size_t high, int value)
 }
 
 /**
- *
- *
- *
+ * find_lowest - Finds the lowest mathching value in the array
+ * @array: list containing different integers
+ * @mid: The mid point of the array
+ * @value: The value we are looking for
+ * @low: The lowest point of the array
+ * Return: The index of a value.
  */
 int find_lowest(int *array, int mid, int value, int low)
 {
-	if (mid >= 0 && array[mid -1] == value)
-		return(finder(array, mid, low, mid, value));
+	if (mid >= 0 && array[mid - 1] == value)
+		return (finder(array, mid, low, mid, value));
 
-	return(mid);
+	return (mid);
 }
 
 
