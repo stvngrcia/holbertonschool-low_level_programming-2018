@@ -17,11 +17,12 @@ int advanced_binary(int *array, size_t size, int value)
 	size_t low;
 	size_t high;
 
+	if (array == NULL || size == 0)
+		return (-1);
+
 	size = size - 1;
 	low = 0;
 	high = size;
-	if (array == NULL)
-		return (-1);
 	if (size == 0)
 	{
 		print_array(array, low, high);
@@ -48,6 +49,7 @@ int finder(int *array, size_t size, size_t low, size_t high, int value)
 
 	mid = size / 2 + low;
 
+	printf("Searching in array: ");
 	print_array(array, low, high);
 
 	if (array[mid] == value)
@@ -64,6 +66,7 @@ int finder(int *array, size_t size, size_t low, size_t high, int value)
 	}
 	if (size == 0 && array[mid + 1] != value)
 	{
+		printf("Searching in array: ");
 		print_array(array, low, high);
 		return (-1);
 	}
@@ -95,11 +98,12 @@ int find_lowest(int *array, int mid, int value, int low)
  */
 void print_array(int *array, size_t low, size_t high)
 {
-	printf("Searching in array: ");
-	while (low < high)
+	if (low < high)
 	{
 		printf("%d, ", array[low]);
 		low++;
+		print_array(array, low, high);
 	}
-	printf("%d\n", array[low]);
+	else if (low == high)
+		printf("%d\n", array[low]);
 }
